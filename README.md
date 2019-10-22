@@ -16,7 +16,6 @@
 |------|----|-------|
 |name|string|null: false|
 |main_user_id|integer|null: false, foreign_key: true|
-|user_id|integer|foreign_key: true|
 ### Association
 - has_many :users, through: :groups_users
 - has_many :messages, dependent: :delete_all
