@@ -9,43 +9,45 @@
 }
 
 .side {
+  background-color: $headingColor;
   width: 300px;
   height: 100%;
   color: #FFFFFF;
   font-weight: bold;
   float: left;
   &__heading {
-    height: 82px;
+    height: 100px;
     padding: 0 20px;
-    background-color: $headingColor;
-    &__box {
+    .heading__box {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      line-height: 82px;
-      &__box__user {
+      line-height: 100px;
+      &__user {
         font-size: 16px;
         float: left;
       }
-      &__box__btns {
-        display: inline;
+      &__btns {
+        display: flex;
+        flex-basis: 20px;
         font-size: 1.3em;
-        color: white;
         list-style: none;
+        li {
+          padding: 5px;
+        }
       }
     }
   }
-
   &__lists {
     height: calc(100vh - 100px);
     background-color: $mainDarkColor;
     padding: 20px 20px 40px;
-    &__box__group {
-      &__name {
+    .lists__box__group {
+      .group__name {
         font-size: 15px;
         padding-bottom: 5px;
       }
-      &__latist-message {
+      .group__latist-message {
         font-size: 11px;
       }
     }
@@ -57,19 +59,46 @@
   float: right;
   &__heading {
     border-bottom: #eeeeee solid 1px;
-    height: 82px;
+    height: 100px;
     padding: 0 40px;
-    display: flex;
     justify-content: space-between;
-    &__left--group-name {
+    .heading__left {
       padding-top: 35px;
+      float: left;
+      &--group-name {
       font-size: 20px;
       color: #333333;
+      margin-bottom: 15px;
+      }
+      &--members {
+        font-size: 12px;
+        color: #999999;
+        display: flex;
+        justify-content: flex-start;
+        li {
+          padding-left: 2px;
+        }
+      }
+    }
+    .heading--btn {
+      float: right;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      position: absolute;
+      right: 40px;
+      .edit-link {
+        text-decoration: none;
+        color: #38aef0;
+      }
     }
   }
   &__main {
     background-color: $mainColor;
-    height: calc(100vh - 90px - 82px);
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
   }
   &__textarea {
     background-color: $gray;

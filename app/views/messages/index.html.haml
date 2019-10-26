@@ -1,55 +1,55 @@
 .notice
-  %p グループを作成しました
+  グループを作成しました
 
 .side
   .side__heading
-    .side__heading__box
-      %p.side__heading__box__user
+    .heading__box
+      %p.heading__box__user
         sample-user
-      %ul.side__heading__box__btns
-        %li.side__heading__box__btns--new-group
+      %ul.heading__box__btns
+        %li.heading__box__btns--new-group
         =link_to "#undefined" do
           =fa_icon 'edit'
-        %li.side__heading__box__btns--edit-user
+        %li.heading__box__btns--edit-user
         =link_to '#undefined' do
           =fa_icon 'cog'
   .side__lists
-    .side__lists__box
-      .side__lists__box__group
-        %p.side__lists__box__group__name
+    .lists__box
+      .lists__box__group
+        %p.group__name
           sample-group-name
-        %p.side__lists__box__group__latist-message
+        %p.group__latist-message
           sample-message
 
 .contents
   .contents__heading
-    .contents__heading__left
-    %p.contents__heading__left--group-name
-      sample_group
-    %ul.contents__heading__left--members
-      Member:
-      %li user1
-      %li user2
-    .contens__heading--btn
-      =link_to "#undefined" do
+    .heading__left
+      %p.heading__left--group-name
+        sample_group
+      %ul.heading__left--members
+        Member：
+        %li user1
+        %li user2
+    .heading--btn
+      =link_to "#undefined", class: "edit-link" do
         %p Edit
 
   .contents__main
-    .contents__main__message
-      %p.contents__main__user
+    .main__message
+      %p.main__user
         sample_user
-      %p.contents__main__date
+      %p.main__date
         sample_date
-      %p.contents__main__message
+      %p.main__message
         sample_message
 
-  .contents__textarea
-    .contents__textarea__left
-      .left__textarea
+  .contents__bottom
+    .bottom__form
+      .form--textarea
         %input placeholder="type a message" type="text"
-      .left__image
+      .form--image
         =link_to "#undefined" do
           = fa_icon '', class: "image--icon"
-      .contents__textarea--btn
+      .form--btn
         %input type="submit"
      
