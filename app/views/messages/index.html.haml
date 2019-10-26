@@ -1,27 +1,50 @@
 .side
   .side__heading
-    .side__heading--user
-    sample-user
-    .side__heading__btn
-  .side__list
-    .side__list
-    sample-group
-    sample-message
+    %p.side__heading--user
+      %p sample-user
+    %ul.side__heading__btns
+      %li.btns__new-group
+      = fa_icon '', class: "btns__new-group--icon"
+      =link_to "#" do
+      %li.btns__edit-user
+      = fa_icon '', class: "btns__edit-uder--icon"
+      =link_to '#' do
+  .side__lists
+    =link_to "#", class: "lists__group--link" do
+    .lists__group
+      %p.group__name
+        sample-group-name
+      %p.group__latist-message
+        sample-message
 
-.contents
-  .contents__heading
-    .contents__heading--group
-      sample_group
-    .contents__heading--members
-      Members: user1 user2
-    .contents__heading--btn
-  .contents__main
-    .contents__main--user
-      sample_user
-    .contents__main--date
-      sample_date
-    .contents__main--message
-      sample_message
-  .contents__textarea
-    .contents__textarea--txt
-    .contents__textarea--btn
+-# .contents
+-#   .contents__heading
+-#     .heading__left
+-#     %p.heading__left--group-name
+-#       sample_group
+-#     %ul.heading__left--members
+-#       Member:
+-#       %li user1
+-#       %li user2
+-#     .contens__heading--btn
+-#       %p Edit
+-#     =link_to "#" do
+
+-#   .contents__main
+-#     .main__message
+-#       %p.main__user
+-#         sample_user
+-#       %p.main__date
+-#         sample_date
+-#       %p.main__message
+-#         sample_message
+-#   .contents__textarea
+-#     .textarea__left
+-#       .left__textarea
+-#         %input placeholder="type a message" type="text"
+-#       .left__image
+-#       = fa_icon '', class: "image--icon"
+-#       =link_to "#" do
+-#     .contents__textarea--btn
+-#       %input type="submit"
+     
