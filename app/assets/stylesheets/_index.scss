@@ -1,2 +1,51 @@
-.side
-  &
+@import "variable";
+
+.notice {
+  background-color: $paleBlue;
+  width: 100%;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.side {
+  width: 300px;
+  height: 100%;
+  color: #FFFFFF;
+  font-weight: bold;
+  float: left;
+  &__heading {
+    height: 70px;
+    padding: 35px 20px 0;
+    background-color: $headingColor;
+    display: flex;
+    justify-content: space-between;
+  }
+    &__user {
+      font-size: 16px;
+      float: left;
+      line-height: 70px;
+    }
+    &__btns {
+      font-size: 1.3em;
+      color: white;
+      display: flex;
+      list-style: none;
+    }
+
+  &__lists {
+    height: calc(100vh - 100px);
+    background-color: $mainDarkColor;
+    padding: 20px 20px 40px;
+    &__group {
+      &__name {
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      &__latist-message {
+        font-size: 11px;
+      }
+    }
+  }
+}

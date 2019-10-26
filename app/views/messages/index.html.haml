@@ -1,34 +1,36 @@
+.notice
+  %p グループを作成しました
+
 .side
   .side__heading
-    %p.side__heading--user
-      %p sample-user
+    %p.side__heading__user
+      sample-user
     %ul.side__heading__btns
       %li.btns__new-group
-      = fa_icon '', class: "btns__new-group--icon"
-      =link_to "#" do
+      =link_to "#undefined" do
+        =fa_icon 'edit'
       %li.btns__edit-user
-      = fa_icon '', class: "btns__edit-uder--icon"
-      =link_to '#' do
+      =link_to '#undefined' do
+        =fa_icon 'cog'
   .side__lists
-    =link_to "#", class: "lists__group--link" do
-    .lists__group
-      %p.group__name
+    .side__lists__group
+      %p.side__lists__group__name
         sample-group-name
-      %p.group__latist-message
+      %p.side__lists__group__latist-message
         sample-message
 
--# .contents
--#   .contents__heading
--#     .heading__left
--#     %p.heading__left--group-name
--#       sample_group
--#     %ul.heading__left--members
--#       Member:
--#       %li user1
--#       %li user2
--#     .contens__heading--btn
--#       %p Edit
--#     =link_to "#" do
+.contents
+  .contents__heading
+    .heading__left
+    %p.heading__left--group-name
+      sample_group
+    %ul.heading__left--members
+      Member:
+      %li user1
+      %li user2
+    .contens__heading--btn
+      %p Edit
+    =link_to "#undefined" do
 
 -#   .contents__main
 -#     .main__message
