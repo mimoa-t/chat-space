@@ -3,50 +3,53 @@
 
 .side
   .side__heading
-    %p.side__heading__user
-      sample-user
-    %ul.side__heading__btns
-      %li.btns__new-group
-      =link_to "#undefined" do
-        =fa_icon 'edit'
-      %li.btns__edit-user
-      =link_to '#undefined' do
-        =fa_icon 'cog'
+    .side__heading__box
+      %p.side__heading__box__user
+        sample-user
+      %ul.side__heading__box__btns
+        %li.side__heading__box__btns--new-group
+        =link_to "#undefined" do
+          =fa_icon 'edit'
+        %li.side__heading__box__btns--edit-user
+        =link_to '#undefined' do
+          =fa_icon 'cog'
   .side__lists
-    .side__lists__group
-      %p.side__lists__group__name
-        sample-group-name
-      %p.side__lists__group__latist-message
-        sample-message
+    .side__lists__box
+      .side__lists__box__group
+        %p.side__lists__box__group__name
+          sample-group-name
+        %p.side__lists__box__group__latist-message
+          sample-message
 
 .contents
   .contents__heading
-    .heading__left
-    %p.heading__left--group-name
+    .contents__heading__left
+    %p.contents__heading__left--group-name
       sample_group
-    %ul.heading__left--members
+    %ul.contents__heading__left--members
       Member:
       %li user1
       %li user2
     .contens__heading--btn
-      %p Edit
-    =link_to "#undefined" do
+      =link_to "#undefined" do
+        %p Edit
 
--#   .contents__main
--#     .main__message
--#       %p.main__user
--#         sample_user
--#       %p.main__date
--#         sample_date
--#       %p.main__message
--#         sample_message
--#   .contents__textarea
--#     .textarea__left
--#       .left__textarea
--#         %input placeholder="type a message" type="text"
--#       .left__image
--#       = fa_icon '', class: "image--icon"
--#       =link_to "#" do
--#     .contents__textarea--btn
--#       %input type="submit"
+  .contents__main
+    .contents__main__message
+      %p.contents__main__user
+        sample_user
+      %p.contents__main__date
+        sample_date
+      %p.contents__main__message
+        sample_message
+
+  .contents__textarea
+    .contents__textarea__left
+      .left__textarea
+        %input placeholder="type a message" type="text"
+      .left__image
+        =link_to "#undefined" do
+          = fa_icon '', class: "image--icon"
+      .contents__textarea--btn
+        %input type="submit"
      

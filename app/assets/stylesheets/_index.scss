@@ -5,7 +5,6 @@
   width: 100%;
   font-size: 15px;
   color: white;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -16,29 +15,32 @@
   font-weight: bold;
   float: left;
   &__heading {
-    height: 70px;
-    padding: 35px 20px 0;
+    height: 82px;
+    padding: 0 20px;
     background-color: $headingColor;
-    display: flex;
-    justify-content: space-between;
-  }
-    &__user {
-      font-size: 16px;
-      float: left;
-      line-height: 70px;
-    }
-    &__btns {
-      font-size: 1.3em;
-      color: white;
+    &__box {
       display: flex;
-      list-style: none;
+      justify-content: space-between;
+      width: 100%;
+      line-height: 82px;
+      &__box__user {
+        font-size: 16px;
+        float: left;
+      }
+      &__box__btns {
+        display: inline;
+        font-size: 1.3em;
+        color: white;
+        list-style: none;
+      }
     }
+  }
 
   &__lists {
     height: calc(100vh - 100px);
     background-color: $mainDarkColor;
     padding: 20px 20px 40px;
-    &__group {
+    &__box__group {
       &__name {
         font-size: 15px;
         padding-bottom: 5px;
@@ -46,6 +48,35 @@
       &__latist-message {
         font-size: 11px;
       }
+    }
+  }
+}
+
+.contents {
+  width: calc(100vw - 300px);
+  float: right;
+  &__heading {
+    border-bottom: #eeeeee solid 1px;
+    height: 82px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    &__left--group-name {
+      padding-top: 35px;
+      font-size: 20px;
+      color: #333333;
+    }
+  }
+  &__main {
+    background-color: $mainColor;
+    height: calc(100vh - 90px - 82px);
+  }
+  &__textarea {
+    background-color: $gray;
+    height: 90px;
+    padding: 20px 40px;
+    &__left {
+      display: inline-flex;
     }
   }
 }
