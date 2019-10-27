@@ -9,10 +9,10 @@
       %ul.heading__box__btns
         %li.heading__box__btns--new-group
         =link_to "#undefined" do
-          =fa_icon 'edit'
+          =fa_icon 'edit', class: "heading__btn--icon"
         %li.heading__box__btns--edit-user
         =link_to '#undefined' do
-          =fa_icon 'cog'
+          =fa_icon 'cog', class: "heading__btn--icon"
   .side__lists
     .lists__box
       .lists__box__group
@@ -35,21 +35,20 @@
         %p Edit
 
   .contents__main
-    .main__message
-      %p.main__user
+    .message__info
+      %p.message__info--user
         sample_user
-      %p.main__date
-        sample_date
-      %p.main__message
-        sample_message
+      %p.message__info--date
+        20XX/XX/XX(Sat) XX:XX:XX
+    .message__content
+      こんにちは！
 
   .contents__bottom
-    .bottom__form
-      .form--textarea
-        %input placeholder="type a message" type="text"
-      .form--image
-        =link_to "#undefined" do
-          = fa_icon '', class: "image--icon"
-      .form--btn
-        %input type="submit"
+    %form.bottom__form
+      .bottom__form--box
+        %input.form--textarea{:placeholder => "type a message", :type => "text"}
+        %label.form--image
+          = fa_icon 'image', class: "form__image--icon"
+          %input{:type => "file", :accept => "image/*"}
+      %input.form--btn{:type => "submit", :value => "Send"}
      

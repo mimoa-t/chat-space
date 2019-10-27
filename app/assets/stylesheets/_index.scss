@@ -11,7 +11,6 @@
 .side {
   background-color: $headingColor;
   width: 300px;
-  height: 100%;
   color: #FFFFFF;
   font-weight: bold;
   float: left;
@@ -30,10 +29,14 @@
       &__btns {
         display: flex;
         flex-basis: 20px;
-        font-size: 1.3em;
+        font-size: 1.0em;
         list-style: none;
+        cursor: pointer;
         li {
-          padding: 5px;
+          padding: 3px;
+        }
+        .heading__btn--icon {
+          color: white;
         }
       }
     }
@@ -41,8 +44,8 @@
   &__lists {
     height: calc(100vh - 100px);
     background-color: $mainDarkColor;
-    padding: 20px 20px 40px;
     .lists__box__group {
+      padding: 20px 20px 40px ;
       .group__name {
         font-size: 15px;
         padding-bottom: 5px;
@@ -56,12 +59,13 @@
 
 .contents {
   width: calc(100vw - 300px);
-  float: right;
+  float: left;
   &__heading {
     border-bottom: #eeeeee solid 1px;
     height: 100px;
     padding: 0 40px;
     justify-content: space-between;
+    overflow: scroll;
     .heading__left {
       padding-top: 35px;
       float: left;
@@ -95,17 +99,76 @@
       }
     }
   }
+
   &__main {
     background-color: $mainColor;
     height: calc(100vh - 190px);
-    padding: 46px 40px;
-  }
-  &__textarea {
+    padding: 0 40px;
+    .message__info {
+      padding-top: 46px;
+      display: flex;
+      margin-bottom: 10px;
+      &--user {
+      font-size: 16px;
+      font-weight: bold;
+      color: $mainMassageFontColor;
+      }
+      &--date {
+        color: $dateColor;
+        font-size: 12px;
+        margin-left: 10px;
+      }
+    }
+    }
+    .message__content {
+      font-size: 14px;
+      color: $mainMassageFontColor;
+      margin-bottom: 40px;
+    }
+
+  &__bottom {
     background-color: $gray;
-    height: 90px;
+    height: 50px;
     padding: 20px 40px;
-    &__left {
-      display: inline-flex;
+    .bottom__form {
+      display: flex;
+      &--box {
+        display: flex;
+        position: relative;
+        width: 100%;
+        .form--textarea {
+          color: $mainMassageFontColor;
+          height: 50px;
+          font-size: 16px;
+          border-style: none;
+          padding: 0 40px 0 10px;
+          width: 100%;
+        }
+        .form--image {
+          position: absolute;
+          font-size: 1.3rem;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          &--icon::before {
+            color: $mainMassageFontColor;
+            font-size: 1.3rem;
+            display: inline-block;
+          }
+          input {
+            display: none;
+          }
+        }
+      }
+    }
+    .form--btn {
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
     }
   }
 }
