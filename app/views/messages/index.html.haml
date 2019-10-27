@@ -15,11 +15,7 @@
           =fa_icon 'cog', class: "heading__btn--icon"
   .side__lists
     .lists__box
-      .lists__box__group
-        %p.group__name
-          sample-group-name
-        %p.group__latist-message
-          sample-message
+      = render partial: "group"
 
 .contents
   .contents__heading
@@ -35,13 +31,7 @@
         %p Edit
 
   .contents__main
-    .message__info
-      %p.message__info--user
-        sample_user
-      %p.message__info--date
-        20XX/XX/XX(Sat) XX:XX:XX
-    .message__content
-      こんにちは！
+    = render partial: "message"
 
   .contents__bottom
     %form.bottom__form
@@ -51,4 +41,3 @@
           = fa_icon 'image', class: "form__image--icon"
           %input{:type => "file", :accept => "image/*"}
       %input.form--btn{:type => "submit", :value => "Send"}
-     

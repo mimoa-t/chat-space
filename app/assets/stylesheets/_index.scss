@@ -44,6 +44,7 @@
   &__lists {
     height: calc(100vh - 100px);
     background-color: $mainDarkColor;
+    overflow: scroll;
     .lists__box__group {
       padding: 20px 20px 40px ;
       .group__name {
@@ -65,7 +66,6 @@
     height: 100px;
     padding: 0 40px;
     justify-content: space-between;
-    overflow: scroll;
     .heading__left {
       padding-top: 35px;
       float: left;
@@ -102,12 +102,12 @@
 
   &__main {
     background-color: $mainColor;
-    height: calc(100vh - 190px);
-    padding: 0 40px;
+    height: calc(100vh - 236px);
+    padding: 46px 40px 0;
+    overflow: scroll;
     .message__info {
-      padding-top: 46px;
       display: flex;
-      margin-bottom: 10px;
+      padding-bottom: 10px;
       &--user {
       font-size: 16px;
       font-weight: bold;
