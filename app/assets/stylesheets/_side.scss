@@ -1,0 +1,51 @@
+
+.side {
+  background-color: $sideHeadingColor;
+  width: 300px;
+  color: $white;
+  font-weight: bold;
+  float: left;
+  &__heading {
+    height: $headerHeight;
+    padding: $sidebarPadding;
+    .heading__box {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      line-height: 100px;
+      &__user {
+        font-size: 16px;
+        float: left;
+      }
+      &__btns {
+        display: flex;
+        flex-basis: 20px;
+        font-size: 1.0em;
+        list-style: none;
+        cursor: pointer;
+        li {
+          padding: 3px;
+        }
+        .heading__btn--icon {
+          color: $white;
+        }
+      }
+    }
+  }
+  &__lists {
+    height: calc(100vh - 100px - 23px);
+    background-color: $sideBarColor;
+    overflow: scroll;
+    .lists__box__group {
+      padding: $sidebarPadding;
+      padding-top: 40px;
+      .group__name {
+        font-size: 15px;
+        padding-bottom: 5px;
+      }
+      .group__latist-message {
+        font-size: 11px;
+      }
+    }
+  }
+}

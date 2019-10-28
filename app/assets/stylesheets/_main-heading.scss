@@ -1,0 +1,38 @@
+.contents__heading {
+  border-bottom: #eeeeee solid 1px;
+  height: $headerHeight;
+  padding: $mainSidePadding;
+  justify-content: space-between;
+  .heading__left {
+    padding-top: 35px;
+    float: left;
+    &--group-name {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 15px;
+    }
+    &--members {
+      font-size: 12px;
+      color: $gray;
+      display: flex;
+      justify-content: flex-start;
+      li {
+        padding-left: 2px;
+      }
+    }
+  }
+  .heading--btn {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin-top: 30px;
+    border: solid 1px $lightBlue;
+    position: absolute;
+    right: 40px;
+    .edit-link {
+      text-decoration: none;
+      color: $lightBlue;
+    }
+  }
+}

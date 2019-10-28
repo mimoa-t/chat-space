@@ -1,0 +1,26 @@
+.contents__main {
+  background-color: $mainBackgroundColor;
+  height: calc(100vh - 236px - 23px);
+  padding: $mainSidePadding;
+  padding-top: 46px;
+  overflow: scroll;
+  .message__info {
+    display: flex;
+    padding-bottom: 10px;
+    &--user {
+    font-size: 16px;
+    font-weight: bold;
+    color: $mainMassageFontColor;
+    }
+    &--date {
+      color: $gray;
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  }
+  .message__content {
+    font-size: 14px;
+    color: $mainMassageFontColor;
+    margin-bottom: 40px;
+  }
+}
