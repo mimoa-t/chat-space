@@ -1,1 +1,43 @@
-hello!
+.notice
+  グループを作成しました
+
+.side
+  .side__heading
+    .heading__box
+      %p.heading__box__user
+        sample-user
+      %ul.heading__box__btns
+        %li.heading__box__btns--new-group
+        =link_to "#undefined" do
+          =fa_icon 'edit', class: "heading__btn--icon"
+        %li.heading__box__btns--edit-user
+        =link_to '#undefined' do
+          =fa_icon 'cog', class: "heading__btn--icon"
+  .side__lists
+    .lists__box
+      = render partial: "group"
+
+.contents
+  .contents__heading
+    .heading__left
+      %p.heading__left--group-name
+        sample_group
+      %ul.heading__left--members
+        Member：
+        %li user1
+        %li user2
+    .heading--btn
+      =link_to "#undefined", class: "edit-link" do
+        %p Edit
+
+  .contents__main
+    = render partial: "message"
+
+  .contents__bottom
+    %form.bottom__form
+      .bottom__form--box
+        %input.form--textarea{placeholder: "type a message", type: "text"}
+        %label.form--image
+          = fa_icon 'image', class: "form__image--icon"
+          %input{type: "file", accept: "image/*"}
+      %input.form--btn{type: "submit", value: "Send"}
