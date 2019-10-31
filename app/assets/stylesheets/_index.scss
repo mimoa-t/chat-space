@@ -1,13 +1,5 @@
 @import "./config/variable";
 
-.notice {
-  background-color: $lightBlue;
-  width: 100%;
-  font-size: 15px;
-  color: $white;
-  text-align: center;
-}
-
 .contents {
   width: calc(100vw - 300px);
   float: left;

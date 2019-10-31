@@ -1,17 +1,14 @@
-.notice
-  グループを作成しました
-
 .side
   .side__heading
     .heading__box
       %p.heading__box__user
-        sample-user
+        = current_user.name
       %ul.heading__box__btns
         %li.heading__box__btns--new-group
         =link_to "#undefined" do
           =fa_icon 'edit', class: "heading__btn--icon"
         %li.heading__box__btns--edit-user
-        =link_to '#undefined' do
+        =link_to '/users/edit', method: :get do
           =fa_icon 'cog', class: "heading__btn--icon"
   .side__lists
     .lists__box
