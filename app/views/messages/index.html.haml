@@ -5,7 +5,7 @@
         = current_user.name
       %ul.heading__box__btns
         %li.heading__box__btns--new-group
-        =link_to "#undefined" do
+        =link_to new_group_path do
           =fa_icon 'edit', class: "heading__btn--icon"
         %li.heading__box__btns--edit-user
         =link_to '/users/edit', method: :get do
