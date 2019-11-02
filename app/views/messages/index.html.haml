@@ -11,7 +11,7 @@
         =link_to edit_user_path(current_user) do
           =fa_icon 'cog', class: "heading__btn--icon"
   .side__lists
-    = render partial: "group"
+    = render partial: "messages/group"
 
 .contents
   .contents__heading
@@ -27,13 +27,19 @@
         %p Edit
 
   .contents__main
-    = render partial: "message"
+    = render partial: "messages/message", collection: @messages
 
   .contents__bottom
-    %form.bottom__form
+    .bottom__form
       .bottom__form--box
-        %input.form--textarea{placeholder: "type a message", type: "text"}
-        %label.form--image
-          = fa_icon 'image', class: "form__image--icon"
-          %input{type: "file", accept: "image/*"}
-      %input.form--btn{type: "submit", value: "Send"}
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: "form--textarea", placeholder: "type a message"
+          = f.label :image, class: 'form--image' do
+            = fa_icon 'image', class: "form__image--icon"
+            = f.file_field :image, class: "hidden"
+          = f.submit "Send", class: "form--btn"
+
+      -#   %label.form--image
+      -#     = fa_icon 'image', class: "form__image--icon"
+      -#     %input{type: "file", accept: "image/*"}
+      -# %input.form--btn{type: "submit", value: "Send"}
