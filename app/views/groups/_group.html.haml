@@ -1,0 +1,16 @@
+.lists__box
+  - current_user.groups.each do |group|
+    .lists__box__group
+      = link_to groups_path(group), class: "groups--link" do
+        .group__name
+          = group.name
+        .group__latist-message
+          メッセージはまだありません
+
+-# groups_path を group_messages_path に編集する
+
+-# .lists__box__group
+-#   %p.group__name
+-#     sample-group-name
+-#   %p.group__latist-message
+-#     sample-messages
