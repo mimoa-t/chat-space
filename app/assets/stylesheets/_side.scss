@@ -38,13 +38,18 @@
     .lists__box__group {
       padding: $sidebarPadding;
       padding-top: 40px;
-      .group__name {
-        font-size: 15px;
-        padding-bottom: 5px;
+      .groups--link {
+        text-decoration: none;
       }
-      .group__latist-message {
-        font-size: 11px;
-      }
+        .group__name {
+          font-size: 15px;
+          padding-bottom: 5px;
+          color: $white;
+        }
+        .group__latist-message {
+          font-size: 11px;
+          color: $white;
+        }
     }
   }
 }
