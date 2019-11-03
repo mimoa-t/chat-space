@@ -5,43 +5,96 @@
   padding-top: 20px;
   padding-bottom: 20px;
   .bottom__form {
-    display: flex;
+    // display: flex;
+
     &--box {
-      display: flex;
       position: relative;
-      width: 100%;
       .form--textarea {
         color: $mainMassageFontColor;
         height: $formHeight;
         font-size: 16px;
-        border-style: none;
-        padding: 0 40px 0 10px;
-        width: 100%;
+        border: none;
+        // padding: 0 50px 0 40px;
+        padding-left: 10px;
+        width: calc(100% - 130px);
+        float: left;
       }
       .form--image {
-        position: absolute;
+        float: left;
         font-size: 1.3rem;
-        top: 10px;
-        right: 10px;
         cursor: pointer;
+        // background-color: $white;
+        height: 50px;
+        padding-right: 10px;
+        line-height: 50px;
+        position: absolute;
+        right: 130px;
         &--icon::before {
           color: $mainMassageFontColor;
           font-size: 1.3rem;
-          display: inline-block;
         }
-        input {
+        .hidden {
           display: none;
         }
+      }  
+      .form--btn {
+        height: $formHeight;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: $lightBlue;
+        color: $white;
+        cursor: pointer;
+        float: right;
+        border: none;
       }
     }
   }
-  .form--btn {
-    width: 100px;
-    height: $formHeight;
-    padding: 0 30px;
-    margin-left: 15px;
-    background-color: $lightBlue;
-    color: $white;
-    cursor: pointer;
-  }
 }
+
+// .contents__bottom {
+//   background-color: $lightgray;
+//   height: $formHeight;
+//   padding: $mainSidePadding;
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+//   .bottom__form {
+//     display: flex;
+//     &--box {
+//       display: flex;
+//       position: relative;
+//       width: 100%;
+//       .form--textarea {
+//         color: $mainMassageFontColor;
+//         height: $formHeight;
+//         font-size: 16px;
+//         border-style: none;
+//         padding: 0 40px 0 10px;
+//         width: 100%;
+//       }
+//       .form--image {
+//         position: absolute;
+//         font-size: 1.3rem;
+//         top: 10px;
+//         right: 10px;
+//         cursor: pointer;
+//         &--icon::before {
+//           color: $mainMassageFontColor;
+//           font-size: 1.3rem;
+//           display: inline-block;
+//         }
+//         .hidden {
+//           display: none;
+//         }
+//       }  
+//       .form--btn {
+//         width: 100px;
+//         height: $formHeight;
+//         padding: 0 30px;
+//         margin-left: 15px;
+//         background-color: $lightBlue;
+//         color: $white;
+//         cursor: pointer;
+//       }
+//     }
+//   }
+// }

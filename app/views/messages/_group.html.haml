@@ -1,11 +1,11 @@
 .lists__box
   - current_user.groups.each do |group|
     .lists__box__group
-      = link_to groups_path(group), class: "groups--link" do
+      = link_to group_messages_path(group), class: "groups--link" do
         .group__name
           = group.name
         .group__latist-message
-          メッセージはまだありません
+          = group.show_last_message
 
 -# groups_path を group_messages_path に編集する
 

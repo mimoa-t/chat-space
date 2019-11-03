@@ -1,0 +1,32 @@
+= render 'shared/side_bar'
+
+.contents
+  .contents__heading
+    .heading__left
+      %p.heading__left--group-name
+        = @group.name
+      %ul.heading__left--members
+        Member：
+        - @group.users.each do |user|
+          = user.name
+    .heading--btn
+      = link_to edit_group_path(@group), class: "edit-link" do
+        %p Edit
+
+  .contents__main
+    = render partial: "messages/message", collection: @messages
+
+  .contents__bottom
+    .bottom__form
+      .bottom__form--box
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: "form--textarea", placeholder: "type a message"
+          = f.label :image, class: 'form--image' do
+            = fa_icon 'image', class: "form__image--icon"
+            = f.file_field :image, class: "hidden"
+          = f.submit "Send", class: "form--btn"
+
+      -#   %label.form--image
+      -#     = fa_icon 'image', class: "form__image--icon"
+      -#     %input{type: "file", accept: "image/*"}
+      -# %input.form--btn{type: "submit", value: "Send"}
