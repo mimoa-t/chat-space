@@ -8,6 +8,7 @@
     // display: flex;
 
     &--box {
+      position: relative;
       .form--textarea {
         color: $mainMassageFontColor;
         height: $formHeight;
@@ -15,21 +16,22 @@
         border: none;
         // padding: 0 50px 0 40px;
         padding-left: 10px;
-        width: calc(100% - 160px);
+        width: calc(100% - 130px);
         float: left;
       }
       .form--image {
         float: left;
         font-size: 1.3rem;
         cursor: pointer;
-        background-color: $white;
+        // background-color: $white;
         height: 50px;
         padding-right: 10px;
         line-height: 50px;
+        position: absolute;
+        right: 130px;
         &--icon::before {
           color: $mainMassageFontColor;
           font-size: 1.3rem;
-
         }
         .hidden {
           display: none;

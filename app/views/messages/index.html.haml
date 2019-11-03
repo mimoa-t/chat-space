@@ -4,11 +4,11 @@
   .contents__heading
     .heading__left
       %p.heading__left--group-name
-        sample_group
+        = @group.name
       %ul.heading__left--members
         Member：
-        %li user1
-        %li user2
+        - @group.users.each do |user|
+          = user.name
     .heading--btn
       = link_to edit_group_path(@group), class: "edit-link" do
         %p Edit
