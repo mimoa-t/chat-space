@@ -2,24 +2,28 @@ $(function(){
 
   function buildHTML(message){
     var addImage = (message.image !== null) ? 
-      `<p class="message__content--image">
+      `
+      <p class="message__content--image">
         <img src="${message.image}">
-      </p>` : ''
+      </p>
+      ` : ''
     var html = 
-      `<div class="message__info">
-                    <p class="message__info--user">
-                      ${message.user.name}
-                    </p>
-                    <p class="message__info--date">
-                      ${message.time}
-                    </p>
-                  </div>
-                  <p class="message__content">
-                    ${message.content}
-                  </p>
-                  <p class="message__content--image">
-                    ${addImage}
-                  </p>`
+      `
+      <div class="message__info">
+        <p class="message__info--user">
+          ${message.user.name}
+        </p>
+        <p class="message__info--date">
+          ${message.time}
+        </p>
+      </div>
+      <p class="message__content">
+        ${message.content}
+      </p>
+      <p class="message__content--image">
+        ${addImage}
+      </p>
+      `
       return html;
   };
 
