@@ -1,6 +1,5 @@
 json.content @message.content
 json.image @message.image.url
-json.user_id current_user.id
 
 json.user do
   json.name @message.user.name
