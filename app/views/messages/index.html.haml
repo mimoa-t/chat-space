@@ -19,7 +19,7 @@
   .contents__bottom
     .bottom__form
       .bottom__form--box
-        = form_for [@group, @message] do |f|
+        = form_for [@group, @message], html: {id: 'bottom__form'} do |f|
           = f.text_field :content, class: "form--textarea", placeholder: "type a message"
           = f.label :image, class: 'form--image' do
             = fa_icon 'image', class: "form__image--icon"
