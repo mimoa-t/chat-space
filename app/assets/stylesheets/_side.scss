@@ -2,11 +2,11 @@
   background-color: $sideHeadingColor;
   width: 300px;
   color: $white;
-  font-weight: bold;
   float: left;
   &__heading {
     height: $headerHeight;
     padding: $sidebarPadding;
+    font-weight: bold;
     .heading__box {
       display: flex;
       justify-content: space-between;
