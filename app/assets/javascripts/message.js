@@ -1,8 +1,12 @@
 $(function(){
 
   function buildHTML(message){
-    if (message.content) {
-      var html = `<div class="message__info">
+    var addImage = (message.image !== null) ? 
+      `<p class="message__content--image">
+        <img src="${message.image}">
+      </p>` : ''
+    var html = 
+      `<div class="message__info">
                     <p class="message__info--user">
                       ${message.user.name}
                     </p>
@@ -12,24 +16,12 @@ $(function(){
                   </div>
                   <p class="message__content">
                     ${message.content}
-                  </p>`
-      return html;
-    };
-    if (message.image) {
-      var html = `<div class="message__info">
-                    <p class="message__info--user">
-                      ${message.user.name}
-                    </p>
-                    <p class="message__info--date">
-                      ${message.time}
-                    </p>
-                  </div>
+                  </p>
                   <p class="message__content--image">
-                    <img src="${message.image}">
+                    ${addImage}
                   </p>`
       return html;
-    };
-  }
+  };
 
   $('#bottom__form').on('submit', function(e){
     e.preventDefault()
@@ -46,7 +38,7 @@ $(function(){
     .done(function(message){
       var html = buildHTML(message);
       $('.contents__main').append(html);
-      $('.form--textarea').val('');
+      $('#bottom__form')[0].reset();
       $('.form--btn').prop('disabled', false);
       $('.contents__main').animate({ scrollTop : $('.contents__main')[0].scrollHeight });
     })
