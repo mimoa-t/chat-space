@@ -1,30 +1,28 @@
 $(function(){
 
   function buildHTML(message){
-    var addImage = (message.image !== null) ? 
-      `
-      <p class="message__content--image">
-        <img src="${message.image}">
-      </p>
-      ` : ''
+    addImage = message.image.url ? 
+      `<img class= "message__content--image" src="${message.image.url}">
+      ` : "";
+
     var html = 
       `
-      <div class="message__info">
-        <p class="message__info--user">
-          ${message.user.name}
+      <div class="message" data-message-id="${message.id}">
+        <div class="message__info">
+          <p class="message__info--user">
+            ${message.user_name}
+          </p>
+          <p class="message__info--date">
+            ${message.time}
+          </p>
+        </div>
+        <p class="message__content">
+          ${message.content}
         </p>
-        <p class="message__info--date">
-          ${message.time}
-        </p>
-      </div>
-      <p class="message__content">
-        ${message.content}
-      </p>
-      <p class="message__content--image">
         ${addImage}
-      </p>
+      </div>
       `
-      return html;
+    return html;
   };
 
   $('#bottom__form').on('submit', function(e){
@@ -50,4 +48,29 @@ $(function(){
       alert('メッセージ送信に失敗しました');
     })
   })
-})
+
+  var reloadMessages = function(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/))
+      last_message_id = $('.message:last').data('message-id');
+      var group_id = $(".group").data("group-id");
+      var url = 'api/messages#index {:format=>"json"}' 
+      $.ajax({
+        url: url,
+        type: 'get',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function(messages){
+        var insertHTML = '';
+        messages.forEach(function (message){
+          insertHTML = buildHTML(message);
+          $('.contents__main').append(insertHTML);
+        })
+        $('.contents__main').animate({ scrollTop: $('.contents__main')[0].scrollHeight });
+      })
+      .fail(function(){
+        console.log('error');
+      });
+  };
+  setInterval(reloadMessages, 5000);
+});
