@@ -69,7 +69,7 @@ $(function(){
         $('.contents__main').animate({ scrollTop: $('.contents__main')[0].scrollHeight });
       })
       .fail(function(){
-        console.log('error');
+        alert('自動更新に失敗しました');
       });
     } else
     ;
