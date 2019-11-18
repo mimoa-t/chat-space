@@ -15,4 +15,3 @@ CarrierWave.configure do |config|
   config.fog_directory  = 'mimo-chat-space'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/mimo-chat-space'
 end
-  }
