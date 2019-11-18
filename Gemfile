@@ -43,7 +43,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'faker'
   gem 'pry-rails'
-  
+
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
@@ -76,6 +76,7 @@ gem 'html2haml'
 
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
+gem 'fog-aws'
 
 gem 'jquery-rails'
 
